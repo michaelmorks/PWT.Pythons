@@ -1,0 +1,579 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Python-inspired bronze and copper palette */
+  --bronze: #302018;
+  --bronze-light: #493124;
+  --copper: #A9673F;
+  --copper-light: #D4A477;
+  --copper-muted: #BFA087;
+  --copper-ivory: #F5EBDD;
+
+  /* Retained for other website sections */
+  --forest: #0B3026;
+  --forest-light: #164535;
+  --sage: #C7D9B4;
+  --ivory: #F5F3E8;
+  --muted: #B8CBAF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--copper-ivory);
+}
+
+/* =========================
+   MAIN NAVIGATION
+========================= */
+
+.navbar {
+  width: 100%;
+  min-height: 104px;
+  padding: 20px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  background: var(--bronze);
+  border-bottom: 1px solid rgba(212, 164, 119, 0.3);
+
+  position: relative;
+  z-index: 10;
+}
+
+/* =========================
+   BRAND AND LOGO
+========================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  color: var(--copper-ivory);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 70px;
+  height: 70px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  flex-shrink: 0;
+  color: var(--copper-light);
+}
+
+.brand-logo img {
+  width: 90%;
+  height: 90%;
+
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
+}
+
+.brand-logo svg {
+  width: 39px;
+  height: 39px;
+}
+
+.brand-name {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.brand-tagline {
+  margin-top: 7px;
+  color: var(--copper-muted);
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  white-space: nowrap;
+}
+
+/* =========================
+   DESKTOP NAVIGATION LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  padding: 12px 0;
+
+  color: var(--copper-ivory);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+/* Active and hover colours */
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--copper-light);
+}
+
+/* Animated underline on desktop */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+  background: var(--copper);
+
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  color: var(--copper-ivory);
+
+  cursor: pointer;
+  padding: 8px;
+
+  transition: color 0.25s ease;
+}
+
+.search-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.search-btn:hover {
+  color: var(--copper-light);
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-btn {
+  display: none;
+
+  background: transparent;
+  color: var(--copper-ivory);
+
+  border: 1px solid rgba(212, 164, 119, 0.4);
+  border-radius: 8px;
+
+  padding: 9px;
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.menu-btn:hover {
+  background: var(--bronze-light);
+  border-color: var(--copper);
+}
+
+.menu-btn svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* =========================
+   TABLET LAYOUT
+========================= */
+
+@media (max-width: 1050px) {
+  .navbar {
+    padding: 18px 4%;
+  }
+
+  .brand-name {
+    font-size: 21px;
+    letter-spacing: 3px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}
+
+/* =========================
+   MOBILE LAYOUT
+========================= */
+
+@media (max-width: 760px) {
+  .navbar {
+    min-height: 86px;
+    padding: 14px 5%;
+  }
+
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-logo svg {
+    width: 31px;
+    height: 31px;
+  }
+
+  .brand-name {
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+
+  .brand-tagline {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+  }
+
+  /* Show hamburger button */
+  .menu-btn {
+    display: block;
+  }
+
+  /* Dropdown menu */
+  .nav-links {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    padding: 0 5%;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    background: var(--bronze);
+    border-top: 1px solid rgba(212, 164, 119, 0.2);
+    z-index: 1000;
+
+    /* Hidden state */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    /* Smooth dropdown animation */
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  /* Dropdown open state */
+  .nav-links.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Dropdown links without underlines */
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+
+    color: var(--copper-ivory);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(212, 164, 119, 0.1);
+
+    transition: color 0.2s ease;
+  }
+
+  /* Remove animated underlines on mobile */
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--copper-light);
+  }
+
+  /* Search alignment if included */
+  .search-btn {
+    justify-content: flex-start;
+  }
+}
+
+/* =========================
+   DEMO CONTENT
+========================= */
+
+.demo {
+  min-height: 75vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--bronze);
+}
+
+.demo p {
+  margin-top: 12px;
+  color: var(--copper);
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+
+
+/* =========================
+   HOME HERO SECTION
+========================= */
+
+.home-section {
+    position: relative;
+    min-height: calc(100vh - 104px);
+    padding: 80px 8%;
+  
+    display: flex;
+    align-items: center;
+  
+    overflow: hidden;
+    isolation: isolate;
+  
+    /* Full background image with dark bronze overlay */
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(30, 20, 14, 0.88) 0%,
+        rgba(30, 20, 14, 0.68) 40%,
+        rgba(30, 20, 14, 0.25) 100%
+      ),
+      url("python.png");
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    color: var(--copper-ivory);
+  }
+  
+  /* Text content over the image */
+  .home-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+  }
+  
+  /* Small heading */
+  .home-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  
+    color: var(--copper-light);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+  
+  .home-label::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--copper);
+  }
+  
+  /* Main heading */
+  .home-content h1 {
+    margin-bottom: 26px;
+    color: var(--copper-ivory);
+  
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.12;
+    font-weight: 600;
+    letter-spacing: -2.5px;
+  }
+  
+  .home-content h1 span {
+    color: var(--copper-light);
+  }
+  
+  /* Description */
+  .home-description {
+    max-width: 470px;
+    margin-bottom: 36px;
+  
+    color: #F0DFCF;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  
+  /* Buttons container */
+  .home-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  /* Shared button styles */
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  
+    padding: 15px 22px;
+    border-radius: 6px;
+  
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+  
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease,
+      border-color 0.25s ease;
+  }
+  
+  /* Primary copper button */
+  .btn-primary {
+    background: var(--copper-light);
+    color: var(--bronze);
+    border: 1px solid var(--copper-light);
+  }
+  
+  .btn-primary:hover {
+    background: var(--copper-ivory);
+    border-color: var(--copper-ivory);
+    transform: translateY(-2px);
+  }
+  
+  /* Secondary transparent button */
+  .btn-secondary {
+    background: rgba(48, 32, 24, 0.2);
+    color: var(--copper-ivory);
+    border: 1px solid rgba(245, 235, 221, 0.55);
+  }
+  
+  .btn-secondary:hover {
+    border-color: var(--copper-light);
+    color: var(--copper-light);
+    transform: translateY(-2px);
+  }
+  
+  /* =========================
+     TABLET
+  ========================= */
+  
+  @media (max-width: 1050px) {
+    .home-section {
+      padding: 65px 5%;
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 760px) {
+    .home-section {
+      min-height: calc(100vh - 86px);
+      padding: 65px 6%;
+  
+      /* Adjust image position for narrower screens */
+      background-position: 58% center;
+  
+      /* Stronger overlay for text readability */
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(30, 20, 14, 0.88) 0%,
+          rgba(30, 20, 14, 0.70) 100%
+        ),
+        url("python.png");
+    }
+  
+    .home-content {
+      max-width: 100%;
+    }
+  
+    .home-content h1 {
+      font-size: clamp(42px, 10vw, 60px);
+      letter-spacing: -1.5px;
+    }
+  
+    .home-description {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  
+    .home-buttons {
+      gap: 12px;
+    }
+  }
+  
+  /* Accessibility: reduce button animation */
+  @media (prefers-reduced-motion: reduce) {
+    .btn-primary,
+    .btn-secondary {
+      transition: none;
+    }
+  }
+  
