@@ -399,7 +399,7 @@ body {
         rgba(30, 20, 14, 0.88) 0%,
         rgba(30, 20, 14, 0.68) 40%,
         rgba(30, 20, 14, 0.25) 100%
-      ),
+      )
       url("python.png");
   
     background-size: cover;
