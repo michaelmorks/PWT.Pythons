@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
@@ -341,23 +340,6 @@ body {
   }
 }
 
-/* =========================
-   DEMO CONTENT
-========================= */
-
-.demo {
-  min-height: 75vh;
-  display: grid;
-  place-items: center;
-  padding: 40px 20px;
-  text-align: center;
-  color: var(--bronze);
-}
-
-.demo p {
-  margin-top: 12px;
-  color: var(--copper);
-}
 
 /* =========================
    ACCESSIBILITY
@@ -399,7 +381,7 @@ body {
         rgba(30, 20, 14, 0.88) 0%,
         rgba(30, 20, 14, 0.68) 40%,
         rgba(30, 20, 14, 0.25) 100%
-      )
+      ),
       url("python.png");
   
     background-size: cover;
@@ -576,4 +558,233 @@ body {
       transition: none;
     }
   }
+
+  /* =========================
+   END HOME HERO SECTION
+========================= */
   
+
+
+/* =========================
+   PORTFOLIO / GALLERY SECTION
+========================= */
+
+.portfolio-section {
+  padding: 90px 0 100px;
+  color: var(--bronze, #302018);
+  overflow: hidden;
+}
+
+/* MAIN HEADING */
+
+.heading-portfolio {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.portfolio-label {
+  margin-bottom: 16px;
+  color: var(--copper, #A9673F);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.heading-portfolio h1 {
+  margin: 0 0 18px;
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+}
+
+.portfolio-description {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #79695D;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* GALLERY INTRODUCTION */
+
+.profile-scroll-wrapper {
+  width: 100%;
+}
+
+.gallery-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  gap: 8px;
+  margin: 0 auto 24px;
+  padding: 0 6%;
+  box-sizing: border-box;
+}
+
+.Gal {
+  margin: 0;
+  color: var(--bronze, #302018);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.gla-words {
+  width: 100%;
+  margin: 0 auto;
+  color: #79695D;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* HORIZONTAL SCROLL */
+
+.profile-scroll {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  padding: 10px 6% 28px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: var(--copper, #A9673F) #E7D8C8;
+  scrollbar-width: thin;
+}
+
+.profile-scroll::-webkit-scrollbar {
+  height: 7px;
+}
+
+.profile-scroll::-webkit-scrollbar-track {
+  background: #E7D8C8;
+  border-radius: 10px;
+}
+
+.profile-scroll::-webkit-scrollbar-thumb {
+  background: var(--copper, #A9673F);
+  border-radius: 10px;
+}
+
+/* INDIVIDUAL IMAGE CARDS */
+
+.gallery-card {
+  position: relative;
+  flex: 0 0 340px;
+  height: 420px;
+  overflow: hidden;
+  border: 1px solid rgba(169, 103, 63, 0.2);
+  border-radius: 14px;
+  background: #302018;
+  scroll-snap-align: start;
+  box-shadow: 0 8px 24px rgba(48, 32, 24, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(48, 32, 24, 0.18);
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+/* IMAGE CAPTION OVERLAY */
+
+.gallery-caption {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 30px 22px 20px;
+  color: #F5EBDD;
+  background: linear-gradient(
+    to top,
+    rgba(30, 20, 14, 0.92),
+    rgba(30, 20, 14, 0)
+  );
+}
+
+.gallery-caption span {
+  color: #D4A477;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.gallery-caption p {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 65px 0 75px;
+  }
+
+  .heading-portfolio {
+    margin-bottom: 40px;
+  }
+
+  .gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 6%;
+  }
+
+  .Gal {
+    font-size: 24px;
+  }
+
+  .profile-scroll {
+    gap: 16px;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .gallery-card {
+    flex-basis: 78vw;
+    max-width: 340px;
+    height: 380px;
+  }
+
+  .gla-words {
+    font-size: 13px;
+  }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-card,
+  .gallery-card img {
+    transition: none;
+  }
+
+  .profile-scroll {
+    scroll-behavior: auto;
+  }
+}
+
+
+
+ /* =========================
+   END PORTFOLIO SECTION
+========================= */
