@@ -790,6 +790,170 @@ body {
 ========================= */
 
 
+/* ================= LOCALITY PROFILES ================= */
+
+.locality-section {
+  padding: 70px 5%;
+  color: var(--bronze, #302018);
+}
+
+.locality-heading {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.locality-heading h2 {
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+  color: var(--bronze, #302018);
+}
+
+.locality-heading p {
+  color: #79695D;
+  line-height: 1.7;
+}
+
+.locality-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.locality-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background: #FFFCF6;
+  border: 1px solid rgba(169, 103, 63, 0.35);
+  border-left: 4px solid var(--copper, #A9673F);
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(48, 32, 24, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.locality-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(48, 32, 24, 0.14);
+}
+
+.locality-card > img {
+  flex: 0 0 115px;
+  width: 115px;
+  height: 145px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 9px;
+}
+
+.locality-content {
+  min-width: 0;
+}
+
+.locality-content h3 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+  color: var(--bronze, #302018);
+}
+
+.locality-content p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.locality-content .scientific-name {
+  margin-top: 0;
+  color: var(--copper, #A9673F);
+  font-style: italic;
+}
+
+.locality-description {
+  color: #79695D;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .locality-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .locality-section {
+    padding: 50px 5%;
+  }
+
+  .locality-card {
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .locality-card > img {
+    flex-basis: 95px;
+    width: 95px;
+    height: 125px;
+  }
+
+  .locality-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .locality-content p {
+    font-size: 0.88rem;
+  }
+}
+
+/* ================= LOCALITY MAP ================= */
+
+.locality-map-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 25px;
+  background: #FFFCF6;
+  border: 1px solid #D4A477;
+  border-radius: 14px;
+  box-sizing: border-box;
+}
+
+.locality-map-wrapper h3 {
+  color: #302018;
+  margin-bottom: 8px;
+}
+
+.locality-map-wrapper p {
+  color: #79695D;
+  margin-bottom: 20px;
+}
+
+#locality-map {
+  width: 100%;
+  height: 450px;
+  border: 1px solid #D4A477;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .locality-map-wrapper {
+    padding: 15px;
+  }
+
+  #locality-map {
+    height: 350px;
+  }
+}
+
+/* ================= END LOCALITY MAP ================= */
+/* =============== END LOCALITY PROFILES =============== */
+
+
+
 
 
 

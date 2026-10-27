@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
 </head>
 
@@ -156,6 +157,123 @@
 <!-- ================= PROFILE / PORTFOLIO SECTION END ================= -->
 
 
+<section class="locality-section" id="localities">
+  <div class="locality-heading">
+    <h2>Python Localities</h2>
+    <p>
+      Explore the distribution, history, habitat and phenotype
+      of carpet pythons from different localities.
+    </p>
+  </div>
+
+  <div class="locality-grid">
+
+    <article class="locality-card">
+      <img src="images/wenlock-river.jpg"
+           alt="Wenlock River carpet python">
+      <div class="locality-content">
+        <h3>Wenlock River</h3>
+        <p class="scientific-name">Morelia spilota variegata</p>
+        <p><strong>Distribution:</strong> Wenlock River, Queensland</p>
+        <p class="locality-description">
+          Locality history, habitat and phenotype description
+          will be added here.
+        </p>
+      </div>
+    </article>
+
+    <article class="locality-card">
+      <img src="images/palmer-river.jpg"
+           alt="Palmer River carpet python">
+      <div class="locality-content">
+        <h3>Palmer River</h3>
+        <p class="scientific-name">Morelia spilota variegata</p>
+        <p><strong>Distribution:</strong> Palmer River, Queensland</p>
+        <p class="locality-description">
+          Locality history, habitat and phenotype description
+          will be added here.
+        </p>
+      </div>
+    </article>
+
+    <article class="locality-card">
+      <img src="images/archer-river.jpg"
+           alt="Archer River carpet python">
+      <div class="locality-content">
+        <h3>Archer River</h3>
+        <p class="scientific-name">Morelia spilota variegata</p>
+        <p><strong>Distribution:</strong> Archer River, Queensland</p>
+        <p class="locality-description">
+          Locality history, habitat and phenotype description
+          will be added here.
+        </p>
+      </div>
+    </article>
+
+    <article class="locality-card">
+      <img src="images/mareeba.jpg" alt="Mareeba carpet python">
+      <div class="locality-content">
+        <h3>Mareeba</h3>
+        <p class="scientific-name">Morelia spilota variegata</p>
+        <p><strong>Distribution:</strong> Mareeba, Queensland</p>
+        <p class="locality-description">
+          Locality history, habitat and phenotype description
+          will be added here.
+        </p>
+      </div>
+    </article>
+
+    <article class="locality-card">
+      <img src="images/atherton.jpg" alt="Atherton carpet python">
+      <div class="locality-content">
+        <h3>Atherton</h3>
+        <p class="scientific-name">Morelia spilota cheynei</p>
+        <p><strong>Distribution:</strong> Atherton, Queensland</p>
+        <p class="locality-description">
+          Locality history, habitat and phenotype description
+          will be added here.
+        </p>
+      </div>
+    </article>
+
+    <article class="locality-card">
+      <img src="images/brisbane.jpg" alt="Brisbane carpet python">
+      <div class="locality-content">
+        <h3>Brisbane</h3>
+        <p class="scientific-name">Morelia spilota mcdowelli</p>
+        <p><strong>Distribution:</strong> Brisbane, Queensland</p>
+        <p class="locality-description">
+          Locality history, habitat and phenotype description
+          will be added here.
+        </p>
+      </div>
+    </article>
+
+    <article class="locality-card">
+      <img src="images/pilliga.jpg" alt="Pilliga carpet python">
+      <div class="locality-content">
+        <h3>Pilliga</h3>
+        <p class="scientific-name">Morelia spilota metcalfei</p>
+        <p><strong>Distribution:</strong> Pilliga, New South Wales</p>
+        <p class="locality-description">
+          Locality history, habitat and phenotype description
+          will be added here.
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="locality-map-wrapper">
+    <h3>Explore the Map</h3>
+    <p>Click a marker to explore each locality.</p>
+    <div id="locality-map"></div>
+  </div>
+  
+</section>
+
+
+
 
 
 
@@ -231,8 +349,8 @@
   
 
 
-
-      <script src="script.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
 
     
 </body>
