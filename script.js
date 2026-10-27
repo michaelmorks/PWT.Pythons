@@ -35,3 +35,36 @@ document.addEventListener('keydown', event => {
         menuBtn.setAttribute('aria-label', 'Open navigation menu');
     }
 });
+
+
+
+/* =========================
+   SCROLL FADE-IN EFFECT
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+  
+    // Show sections immediately if reduced motion is preferred
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      sections.forEach((section) => section.classList.add("show"));
+      return;
+    }
+  
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1
+      }
+    );
+  
+    sections.forEach((section) => observer.observe(section));
+  });
+  

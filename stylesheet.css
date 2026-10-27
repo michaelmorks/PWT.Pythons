@@ -788,3 +788,184 @@ body {
  /* =========================
    END PORTFOLIO SECTION
 ========================= */
+
+
+
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+.footer-section {
+  width: 100%;
+  background: linear-gradient(135deg, #302018, #493124);
+  color: #F5EBDD;
+  padding: 80px 20px 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #F5EBDD;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #A9673F;
+}
+
+.footer-links a {
+  display: block;
+  color: #F5EBDD;
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #D4A477;
+  transform: translateX(4px);
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-contact a {
+  color: #F5EBDD;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover { color: #D4A477;
+  ; }
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #F5EBDD;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover { transform: translateX(4px); }
+.social-link:hover span {   color: #D4A477;}
+.social-link:hover img { filter: brightness(1.2); }
+
+.social-icon-img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(245, 235, 221, 0.35);
+  font-size: 0.95rem;
+  color: #F5EBDD;
+}
+
+.footer-bottom p,
+.rights {
+  margin: 2px 0;
+  line-height: 1.9;
+  color: #F5EBDD;
+}
+
+.morks-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  margin-top: 0;
+}
+
+.footer-Morks {
+  font-size: 1rem;
+  color: #F5EBDD;
+}
+
+.Morkslogo {
+  width: 40px;
+  height: auto;
+  margin-bottom: 3px;
+}
+
+.morks-name {
+  font-weight: bolder;
+  color: #B59410;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .social-link { justify-content: center; }
+}
+/* ================= END OF FOOTER ================= */
+
+
+/* ===== FADE-IN SCROLL EFFECT ===== */
+
+
+section {
+  transform: translateY(60px);
+  transition: transform 0.8s ease-out;
+  will-change: transform;
+}
+
+section.show {
+  transform: translateY(0);
+}
+
+
+/* When section is visible */
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  video,
+  canvas {
+    animation: none !important;
+  }
+}
