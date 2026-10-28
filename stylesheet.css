@@ -892,8 +892,6 @@ body {
 #products {
   padding: 80px 8%;
   text-align: center;
-  background: #211811;
-  color: #f5e6d3;
 }
 
 #products h2 {
@@ -940,8 +938,8 @@ body {
 .product-button {
   display: inline-block;
   padding: 12px 26px;
-  background: #C58B55;
-  color: #211811;
+  background: #9a6116 ;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
@@ -949,7 +947,7 @@ body {
 }
 
 .product-button:hover {
-  background: #f5e6d3;
+  background: #9a784a;
 }
 
 /* Mobile layout */
