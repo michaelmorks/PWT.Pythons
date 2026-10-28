@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Localities | PWT Pythons</title>
+
+  <!-- Shared website styles -->
+  <link rel="stylesheet" href="../stylesheet.css">
+
+  <!-- Localities page styles -->
+  <link rel="stylesheet" href="localities.css">
+
+  <!-- Leaflet map styles -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+</head>
+
+<body>
+<!-- ================= LOADING SCREEN ================= -->
+<div id="loader-overlay">
+  <div class="loader-content">
+
+    <div class="loader-spinner">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+  </div>
+</div>
+<!-- ================= END OF LOADING SCREEN ================= -->
+
+
+  <!-- Navigation -->
+  <nav class="navbar" aria-label="Main navigation">
+
+    <a href="../index.html#home" class="brand"
+       aria-label="PWT Pythons home">
+
+      <div class="brand-logo">
+        <img src="../main-imgs/logo.png"
+             alt="PWT Pythons logo">
+      </div>
+
+      <div class="brand-text">
+        <div class="brand-name">PWT PYTHONS</div>
+      </div>
+
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#home">Home</a></li>
+      <li><a href="../index.html#gallery">Gallery</a></li>
+      <li><a class="active" href="localities.html">Localities</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
+    <button class="menu-btn" id="menuBtn"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="navLinks">
+<svg viewBox="0 0 24 24" fill="none"
+   stroke="currentColor" stroke-width="2"
+   stroke-linecap="round">
+<path d="M4 7H20M4 12H20M4 17H20"/>
+</svg>
+</button>
+
+  </nav>
+
+  <!-- Page heading -->
+  <header class="locality-page-hero">
+
+    <p class="portfolio-label">PWT PYTHONS FIELD GUIDE</p>
+
+    <h1>Explore Our <span>Localities</span></h1>
+
+    <p>
+      Discover the geographical origins, habitats and distinctive
+      characteristics of the carpet pythons represented in our collection.
+    </p>
+
+  </header>
+
+  <!-- Interactive map -->
+  <section class="locality-map-wrapper" aria-labelledby="map-heading">
+
+    <h2 id="map-heading">Explore the Map</h2>
+
+    <p>
+      Select a marker to explore a locality, or select a locality
+      profile below to find it on the map.
+    </p>
+
+    <div id="locality-map"
+         role="application"
+         aria-label="Interactive map of python localities">
+    </div>
+
+  </section>
+
+  <!-- Locality profiles -->
+  <main class="locality-section" id="localities">
+
+    <div class="locality-heading">
+
+      <h2>Our Collection</h2>
+
+      <p>
+        Explore the localities currently represented in our collection.
+        More profiles and information can be added as the collection grows.
+      </p>
+
+    </div>
+
+    <div class="locality-grid">
+
+      <!-- Wenlock River -->
+      <article class="locality-card" id="wenlock-river">
+
+        <img
+          src="../main-imgs/wenlock-river.jpg"
+          alt="Wenlock River locality"
+          loading="lazy"
+        >
+
+        <div class="locality-content">
+          <h3>Wenlock River</h3>
+          <p class="scientific-name">Morelia spilota variegata</p>
+          <p><strong>Locality:</strong> Wenlock River, Queensland</p>
+          <p class="locality-description">
+            History, habitat and phenotype information will be added here.
+          </p>
+        </div>
+
+      </article>
+
+      <!-- Palmer River -->
+      <article class="locality-card" id="palmer-river">
+
+        <img
+          src="../main-imgs/palmer-river.jpg"
+          alt="Palmer River locality"
+          loading="lazy"
+        >
+
+        <div class="locality-content">
+          <h3>Palmer River</h3>
+          <p class="scientific-name">Morelia spilota variegata</p>
+          <p><strong>Locality:</strong> Palmer River, Queensland</p>
+          <p class="locality-description">
+            History, habitat and phenotype information will be added here.
+          </p>
+        </div>
+
+      </article>
+
+      <!-- Archer River -->
+      <article class="locality-card" id="archer-river">
+
+        <img
+          src="../main-imgs/archer-river.jpg"
+          alt="Archer River locality"
+          loading="lazy"
+        >
+
+        <div class="locality-content">
+          <h3>Archer River</h3>
+          <p class="scientific-name">Morelia spilota variegata</p>
+          <p><strong>Locality:</strong> Archer River, Queensland</p>
+          <p class="locality-description">
+            History, habitat and phenotype information will be added here.
+          </p>
+        </div>
+
+      </article>
+
+      <!-- Mareeba -->
+      <article class="locality-card" id="mareeba">
+
+        <img
+          src="../main-imgs/mareeba.jpg"
+          alt="Mareeba locality"
+          loading="lazy"
+        >
+
+        <div class="locality-content">
+          <h3>Mareeba</h3>
+          <p class="scientific-name">Morelia spilota variegata</p>
+          <p><strong>Locality:</strong> Mareeba, Queensland</p>
+          <p class="locality-description">
+            History, habitat and phenotype information will be added here.
+          </p>
+        </div>
+
+      </article>
+
+      <!-- Atherton -->
+      <article class="locality-card" id="atherton">
+
+        <img
+          src="../main-imgs/atherton.jpg"
+          alt="Atherton locality"
+          loading="lazy"
+        >
+
+        <div class="locality-content">
+          <h3>Atherton</h3>
+          <p class="scientific-name">Morelia spilota cheynei</p>
+          <p><strong>Locality:</strong> Atherton, Queensland</p>
+          <p class="locality-description">
+            History, habitat and phenotype information will be added here.
+          </p>
+        </div>
+
+      </article>
+
+      <!-- Brisbane -->
+      <article class="locality-card" id="brisbane">
+
+        <img
+          src="../main-imgs/brisbane.jpg"
+          alt="Brisbane locality"
+          loading="lazy"
+        >
+
+        <div class="locality-content">
+          <h3>Brisbane</h3>
+          <p class="scientific-name">Morelia spilota mcdowelli</p>
+          <p><strong>Locality:</strong> Brisbane, Queensland</p>
+          <p class="locality-description">
+            History, habitat and phenotype information will be added here.
+          </p>
+        </div>
+
+      </article>
+
+      <!-- Pilliga -->
+      <article class="locality-card" id="pilliga">
+
+        <img
+          src="../main-imgs/pilliga.jpg"
+          alt="Pilliga locality"
+          loading="lazy"
+        >
+
+        <div class="locality-content">
+          <h3>Pilliga</h3>
+          <p class="scientific-name">Morelia spilota metcalfei</p>
+          <p><strong>Locality:</strong> Pilliga, New South Wales</p>
+          <p class="locality-description">
+            History, habitat and phenotype information will be added here.
+          </p>
+        </div>
+
+      </article>
+
+
+
+
+<!-- Proserpine -->
+<article class="locality-card" id="proserpine">
+
+  <img
+    src="../main-imgs/proserpine.jpg"
+    alt="Proserpine locality"
+    loading="lazy"
+  >
+
+  <div class="locality-content">
+    <h3>Proserpine</h3>
+    <p class="scientific-name">Morelia spilota mcdowelli</p>
+    <p><strong>Locality:</strong> Proserpine, Queensland</p>
+    <p class="locality-description">
+      A coastal carpet python associated with the Proserpine area.
+      Currently in quarantine and checked every other week.
+    </p>
+  </div>
+
+</article>
+
+
+
+    </div>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer-section">
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <a href="../index.html">Home</a>
+          <a href="../index.html#gallery">Gallery</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+
+            <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><a href="">--</a></p>
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+      <p class="rights">
+        © 2026 PWT Pythons. All Rights Reserved.
+      </p>
+
+      <div class="morks-wrapper">
+        <p class="footer-Morks">
+          Powered By <span class="morks-name">Morks</span>
+        </p>
+
+        <img
+          class="Morkslogo"
+          src="../main-imgs/morks-logo.png"
+          alt="Morks"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Leaflet map library -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Localities page JavaScript -->
+  <script src="localities.js"></script>
+
+</body>
+</html>

@@ -13,12 +13,33 @@
 
 <body>
 
+  <body>
+
+<!-- ================= LOADING SCREEN ================= -->
+<div id="loader-overlay">
+  <div class="loader-content">
+
+    <div class="loader-spinner">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+  </div>
+</div>
+<!-- ================= END OF LOADING SCREEN ================= -->
+  
+  
+
     <nav class="navbar" aria-label="Main navigation">
 
         <a href="#home" class="brand" aria-label="PWT Pythons home">
     
           <div class="brand-logo">
-            <img src="IMG_8740.PNG" alt="Bussiness Logo">
+            <img src="main-imgs/logo.png" alt="Bussiness Logo">
             
           </div>
     
@@ -30,8 +51,8 @@
     
         <ul class="nav-links" id="navLinks">
           <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#species">Species</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="localities/localities.html">Localities</a></li>
           <li><a href="#research">Research</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -102,7 +123,7 @@
     <div class="profile-scroll">
 
       <div class="gallery-card">
-        <img src="python.png" alt="Python in its natural habitat">
+        <img src="main-imgs/logo.png" alt="Python in its natural habitat">
         <div class="gallery-caption">
           <span>01</span>
           <p>The Python</p>
@@ -110,7 +131,7 @@
       </div>
 
       <div class="gallery-card">
-        <img src="IMG_8740.PNG" alt="Python gallery image">
+        <img src="main-imgs/python.png" alt="Python gallery image">
         <div class="gallery-caption">
           <span>02</span>
           <p>Our Collection</p>
@@ -118,7 +139,7 @@
       </div>
 
       <div class="gallery-card">
-        <img src="python.png" alt="Python close-up">
+        <img src="main-imgs/logo.png" alt="Python close-up">
         <div class="gallery-caption">
           <span>03</span>
           <p>Wildlife</p>
@@ -126,7 +147,7 @@
       </div>
 
       <div class="gallery-card">
-        <img src="IMG_8740.PNG" alt="Python gallery image">
+        <img src="main-imgs/python.png" alt="Python gallery image">
         <div class="gallery-caption">
           <span>04</span>
           <p>Discover More</p>
@@ -134,7 +155,7 @@
       </div>
 
       <div class="gallery-card">
-        <img src="python.png" alt="Python in nature">
+        <img src="main-imgs/logo.png" alt="Python in nature">
         <div class="gallery-caption">
           <span>05</span>
           <p>Natural Beauty</p>
@@ -142,7 +163,7 @@
       </div>
 
       <div class="gallery-card">
-        <img src="IMG_8740.PNG" alt="Python gallery image">
+        <img src="main-imgs/python.png" alt="Python gallery image">
         <div class="gallery-caption">
           <span>06</span>
           <p>Explore Pythons</p>
@@ -153,125 +174,6 @@
   </div>
 
 </section>
-
-<!-- ================= PROFILE / PORTFOLIO SECTION END ================= -->
-
-
-<section class="locality-section" id="localities">
-  <div class="locality-heading">
-    <h2>Python Localities</h2>
-    <p>
-      Explore the distribution, history, habitat and phenotype
-      of carpet pythons from different localities.
-    </p>
-  </div>
-
-  <div class="locality-grid">
-
-    <article class="locality-card">
-      <img src="images/wenlock-river.jpg"
-           alt="Wenlock River carpet python">
-      <div class="locality-content">
-        <h3>Wenlock River</h3>
-        <p class="scientific-name">Morelia spilota variegata</p>
-        <p><strong>Distribution:</strong> Wenlock River, Queensland</p>
-        <p class="locality-description">
-          Locality history, habitat and phenotype description
-          will be added here.
-        </p>
-      </div>
-    </article>
-
-    <article class="locality-card">
-      <img src="images/palmer-river.jpg"
-           alt="Palmer River carpet python">
-      <div class="locality-content">
-        <h3>Palmer River</h3>
-        <p class="scientific-name">Morelia spilota variegata</p>
-        <p><strong>Distribution:</strong> Palmer River, Queensland</p>
-        <p class="locality-description">
-          Locality history, habitat and phenotype description
-          will be added here.
-        </p>
-      </div>
-    </article>
-
-    <article class="locality-card">
-      <img src="images/archer-river.jpg"
-           alt="Archer River carpet python">
-      <div class="locality-content">
-        <h3>Archer River</h3>
-        <p class="scientific-name">Morelia spilota variegata</p>
-        <p><strong>Distribution:</strong> Archer River, Queensland</p>
-        <p class="locality-description">
-          Locality history, habitat and phenotype description
-          will be added here.
-        </p>
-      </div>
-    </article>
-
-    <article class="locality-card">
-      <img src="images/mareeba.jpg" alt="Mareeba carpet python">
-      <div class="locality-content">
-        <h3>Mareeba</h3>
-        <p class="scientific-name">Morelia spilota variegata</p>
-        <p><strong>Distribution:</strong> Mareeba, Queensland</p>
-        <p class="locality-description">
-          Locality history, habitat and phenotype description
-          will be added here.
-        </p>
-      </div>
-    </article>
-
-    <article class="locality-card">
-      <img src="images/atherton.jpg" alt="Atherton carpet python">
-      <div class="locality-content">
-        <h3>Atherton</h3>
-        <p class="scientific-name">Morelia spilota cheynei</p>
-        <p><strong>Distribution:</strong> Atherton, Queensland</p>
-        <p class="locality-description">
-          Locality history, habitat and phenotype description
-          will be added here.
-        </p>
-      </div>
-    </article>
-
-    <article class="locality-card">
-      <img src="images/brisbane.jpg" alt="Brisbane carpet python">
-      <div class="locality-content">
-        <h3>Brisbane</h3>
-        <p class="scientific-name">Morelia spilota mcdowelli</p>
-        <p><strong>Distribution:</strong> Brisbane, Queensland</p>
-        <p class="locality-description">
-          Locality history, habitat and phenotype description
-          will be added here.
-        </p>
-      </div>
-    </article>
-
-    <article class="locality-card">
-      <img src="images/pilliga.jpg" alt="Pilliga carpet python">
-      <div class="locality-content">
-        <h3>Pilliga</h3>
-        <p class="scientific-name">Morelia spilota metcalfei</p>
-        <p><strong>Distribution:</strong> Pilliga, New South Wales</p>
-        <p class="locality-description">
-          Locality history, habitat and phenotype description
-          will be added here.
-        </p>
-      </div>
-    </article>
-
-  </div>
-
-  <div class="locality-map-wrapper">
-    <h3>Explore the Map</h3>
-    <p>Click a marker to explore each locality.</p>
-    <div id="locality-map"></div>
-  </div>
-  
-</section>
-
 
 
 
@@ -333,7 +235,7 @@
     <p class="rights">© 2026 PWT Pythons. All Rights Reserved.</p>
     <div class="morks-wrapper">
       <p class="footer-Morks">Powered By <spam class="morks-name">Morks</spam></p>
-      <img class="Morkslogo" src="Transparent_mainLogo.png" alt="Morks">
+      <img class="Morkslogo" src="main-imgs/morks-logo.png" alt="Morks">
     </div>
   </div>
 
