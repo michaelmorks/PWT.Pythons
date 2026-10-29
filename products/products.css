@@ -1,0 +1,724 @@
+/* ========================================
+   PRODUCTS PAGE
+   PWT PYTHONS
+======================================== */
+
+:root {
+    --product-background: #211811;
+    --product-surface: #FFFCF6;
+    --product-bronze: #C58B55;
+    --product-copper: #A9673F;
+    --product-text: #302018;
+    --product-muted: #79695D;
+    --product-border: rgba(169, 103, 63, 0.35);
+}
+
+/* Keep page colours consistent with the main website */
+
+body {
+    color: #f5e6d3;
+}
+
+/* ========================================
+   LOADING SCREEN
+======================================== */
+
+#loader-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #211811;
+    z-index: 999999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loader-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-spinner {
+    --uib-size: 60px;
+    --uib-color: #C58B55;
+    --uib-speed: 1.5s;
+    --dot-size: calc(var(--uib-size) * 0.17);
+
+    position: relative;
+    width: var(--uib-size);
+    height: var(--uib-size);
+    animation: productSmoothRotate
+        calc(var(--uib-speed) * 1.8) linear infinite;
+}
+
+.loader-spinner .dot {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    animation: productRotate var(--uib-speed) ease-in-out infinite;
+}
+
+.loader-spinner .dot::before {
+    content: "";
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    background: var(--uib-color);
+}
+
+.loader-spinner .dot:nth-child(2) {
+    animation-delay: calc(var(--uib-speed) * -0.4175);
+}
+
+.loader-spinner .dot:nth-child(3) {
+    animation-delay: calc(var(--uib-speed) * -0.334);
+}
+
+.loader-spinner .dot:nth-child(4) {
+    animation-delay: calc(var(--uib-speed) * -0.2505);
+}
+
+.loader-spinner .dot:nth-child(5) {
+    animation-delay: calc(var(--uib-speed) * -0.167);
+}
+
+.loader-spinner .dot:nth-child(6) {
+    animation-delay: calc(var(--uib-speed) * -0.0835);
+}
+
+@keyframes productRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    65%, 100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes productSmoothRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   NAVIGATION
+   Reuses the shared stylesheet
+======================================== */
+
+.navbar {
+    background: rgba(33, 24, 17, 0.96);
+}
+
+.nav-links a.active {
+    color: #C58B55;
+}
+
+
+/* ========================================
+   PRODUCTS PAGE
+   PWT PYTHONS
+======================================== */
+
+body {
+    color: #f5e6d3;
+}
+
+/* ========================================
+   LOADING SCREEN
+======================================== */
+
+#loader-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #211811;
+    z-index: 999999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loader-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-spinner {
+    --uib-size: 60px;
+    --uib-color: #C58B55;
+    --uib-speed: 1.5s;
+    --dot-size: calc(var(--uib-size) * 0.17);
+
+    position: relative;
+    width: var(--uib-size);
+    height: var(--uib-size);
+    animation: productSmoothRotate calc(var(--uib-speed) * 1.8) linear infinite;
+}
+
+.loader-spinner .dot {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    animation: productRotate var(--uib-speed) ease-in-out infinite;
+}
+
+.loader-spinner .dot::before {
+    content: "";
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    background: var(--uib-color);
+}
+
+.loader-spinner .dot:nth-child(2) { animation-delay: calc(var(--uib-speed) * -0.4175); }
+.loader-spinner .dot:nth-child(3) { animation-delay: calc(var(--uib-speed) * -0.334); }
+.loader-spinner .dot:nth-child(4) { animation-delay: calc(var(--uib-speed) * -0.2505); }
+.loader-spinner .dot:nth-child(5) { animation-delay: calc(var(--uib-speed) * -0.167); }
+.loader-spinner .dot:nth-child(6) { animation-delay: calc(var(--uib-speed) * -0.0835); }
+
+@keyframes productRotate {
+    0% { transform: rotate(0deg); }
+    65%, 100% { transform: rotate(360deg); }
+}
+
+@keyframes productSmoothRotate {
+    to { transform: rotate(360deg); }
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.navbar {
+    background: rgba(33, 24, 17, 0.96);
+}
+
+.nav-links a.active {
+    color: #C58B55;
+}
+
+/* ========================================
+   PAGE HEADING
+======================================== */
+
+.products-page-hero {
+    padding: 100px 5% 40px;
+    text-align: center;
+}
+
+.products-page-hero .portfolio-label {
+    margin: 0 0 12px;
+    color: #ce7725;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.products-page-hero h1 {
+    margin: 15px 0;
+    color: #d7761b;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.2;
+}
+
+.products-page-hero h1 span {
+    color: #c66000;
+}
+
+.products-page-hero > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ce8135;
+    line-height: 1.8;
+}
+
+/* ========================================
+   PRODUCTS SECTION
+======================================== */
+
+#products {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+#products h2 {
+    color: #C58B55;
+    margin-bottom: 40px;
+}
+
+.products-intro {
+    margin-bottom: 40px;
+}
+
+.products-intro h2 {
+    margin-bottom: 15px;
+}
+
+.products-intro p {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #c66000;
+}
+
+/* Image on the left, description on the right */
+.main-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.main-box img {
+    width: 40%;
+    max-width: 400px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.product-description {
+    flex: 1;
+}
+
+.product-label {
+    margin: 0 0 8px;
+    color: #cb7627;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.product-description h3 {
+    color: #c97322;
+    margin-bottom: 15px;
+}
+
+.product-description p {
+    line-height: 1.8;
+    color: #c18e5f;
+}
+
+.product-status {
+    font-style: italic;
+}
+
+.product-enquiry {
+    margin: 50px auto 15px;
+}
+
+/* Enquiry links styled as buttons */
+.product-button,
+.product-card-button {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #9a6116;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.product-button:hover,
+.product-card-button:hover {
+    background: #9a784a;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 45px 7% 20px;
+    background: #211811;
+    border-top: 1px solid rgba(197, 139, 85, 0.3);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin: 0 0 8px;
+    color: #C58B55;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: #f5e6d3;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #C58B55;
+}
+
+.footer-contact {
+    margin-left: auto;
+    text-align: right;
+}
+
+.footer-contact p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(197, 139, 85, 0.2);
+}
+
+.rights,
+.footer-Morks {
+    margin: 0;
+    color: #cbbba8;
+    font-size: 0.85rem;
+}
+
+.morks-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.morks-name {
+    color: #C58B55;
+    font-weight: 700;
+}
+
+.Morkslogo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* ========================================
+   MOBILE LAYOUT
+======================================== */
+
+@media (max-width: 700px) {
+    #products {
+        padding: 50px 5%;
+    }
+
+    .main-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-box img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 5% 20px;
+    }
+
+    .footer-contact {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .loader-spinner,
+    .loader-spinner .dot {
+        animation: none;
+    }
+
+    #loader-overlay,
+    .product-button,
+    .product-card-button {
+        transition: none;
+    }
+}
+
+/* ========================================
+   FOOTER
+   Matches the Localities footer layout
+======================================== */
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    padding: 45px 7% 20px;
+    background: #211811;
+    border-top: 1px solid rgba(197, 139, 85, 0.3);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin: 0 0 8px;
+    color: #C58B55;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: #f5e6d3;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #C58B55;
+}
+
+.footer-contact {
+    margin-left: auto;
+    text-align: right;
+}
+
+.footer-contact p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(197, 139, 85, 0.2);
+}
+
+.rights {
+    margin: 0;
+    color: #cbbba8;
+    font-size: 0.85rem;
+}
+
+.morks-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-Morks {
+    margin: 0;
+    color: #cbbba8;
+    font-size: 0.85rem;
+}
+
+.morks-name {
+    color: #e9be00;
+    font-weight: 700;
+}
+
+.Morkslogo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* ========================================
+   FOCUS ACCESSIBILITY
+======================================== */
+
+.product-card-button:focus-visible,
+.product-button:focus-visible,
+.footer-section a:focus-visible,
+.menu-btn:focus-visible {
+    outline: 2px solid #C58B55;
+    outline-offset: 4px;
+}
+
+/* ========================================
+   RESPONSIVE LAYOUT
+======================================== */
+
+@media (max-width: 800px) {
+    .products-page-hero {
+        padding: 75px 5% 55px;
+    }
+
+    .products-section {
+        padding: 25px 5% 65px;
+    }
+
+    .main-box {
+        gap: 18px;
+        padding: 16px;
+    }
+
+    .main-box > img {
+        flex-basis: 170px;
+        width: 170px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-page-hero {
+        padding: 60px 5% 45px;
+    }
+
+    .main-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 14px;
+    }
+
+    .main-box > img {
+        flex: none;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .product-description h3 {
+        font-size: 1.25rem;
+    }
+
+    .product-card-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .product-enquiry {
+        margin-top: 45px;
+    }
+
+    .product-button {
+        width: 100%;
+        max-width: 340px;
+        box-sizing: border-box;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 5% 20px;
+    }
+
+    .footer-contact {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .loader-spinner,
+    .loader-spinner .dot {
+        animation: none;
+    }
+
+    #loader-overlay,
+    .main-box,
+    .product-button,
+    .product-card-button {
+        transition: none;
+    }
+
+    .main-box:hover,
+    .product-button:hover {
+        transform: none;
+    }
+}
+
+/* Turn off any fade/slide-in effects inherited from stylesheet.css */
+.products-page-hero,
+.products-section,
+.products-intro,
+.main-box,
+.product-description,
+.product-enquiry {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    filter: none !important;
+}
