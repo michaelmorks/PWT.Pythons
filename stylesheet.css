@@ -1179,40 +1179,4 @@ body {
 /* ================= END OF FOOTER ================= */
 
 
-/* ===== FADE-IN SCROLL EFFECT ===== */
 
-
-section {
-  transform: translateY(60px);
-  transition: transform 0.8s ease-out;
-  will-change: transform;
-}
-
-section.show {
-  transform: translateY(0);
-}
-
-
-/* When section is visible */
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  video,
-  canvas {
-    animation: none !important;
-  }
-}

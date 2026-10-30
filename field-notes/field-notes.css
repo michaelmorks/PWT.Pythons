@@ -1,0 +1,202 @@
+
+/* ========================================
+   FIELD NOTES PAGE
+   PWT PYTHONS
+======================================== */
+
+body {
+    background: #FFFCF6;
+    color: #302018;
+}
+
+/* ========================================
+   PAGE HEADING
+======================================== */
+
+.field-notes-hero {
+    padding: 100px 5% 40px;
+    text-align: center;
+}
+
+.field-notes-hero .portfolio-label {
+    margin: 0 0 12px;
+    color: #ce7725;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.field-notes-hero h1 {
+    margin: 15px 0;
+    color: #d7761b;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.2;
+}
+
+.field-notes-hero > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #79695D;
+    line-height: 1.8;
+}
+
+/* ========================================
+   INTRODUCTION
+======================================== */
+
+.field-notes-intro {
+    max-width: 850px;
+    margin: 20px auto 65px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.field-notes-intro h2,
+.field-notes-section > h2 {
+    color: #C58B55;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.field-notes-intro p {
+    color: #79695D;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   FIELD OBSERVATIONS
+======================================== */
+
+.field-notes-section {
+    max-width: 1050px;
+    margin: 0 auto 80px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.field-notes-section > h2 {
+    margin-bottom: 35px;
+}
+
+.field-note-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    margin-bottom: 30px;
+    background: #f5e6d3;
+    border: 1px solid rgba(169, 103, 63, 0.35);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.field-note-card img {
+    width: 40%;
+    max-width: 380px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.field-note-description {
+    flex: 1;
+}
+
+.field-note-label {
+    color: #ce7725;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.field-note-description h3 {
+    color: #c97322;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.field-note-meta {
+    color: #9a784a;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.field-note-description p {
+    color: #79695D;
+    line-height: 1.8;
+}
+
+/* ========================================
+   MOBILE LAYOUT
+======================================== */
+
+@media (max-width: 700px) {
+
+    .field-notes-hero {
+        padding: 75px 5% 35px;
+    }
+
+    .field-notes-intro {
+        margin-bottom: 45px;
+    }
+
+    .field-notes-intro h2,
+    .field-notes-section > h2 {
+        font-size: 1.5rem;
+    }
+
+    .field-note-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px;
+        gap: 20px;
+    }
+
+    .field-note-card img {
+        width: 100%;
+        max-width: 100%;
+        height: 230px;
+    }
+
+    .field-note-description h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .field-note-card {
+        transition: none;
+    }
+}
+
+/* Footer layout */
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Quick Links on the left */
+.footer-links {
+    text-align: left;
+}
+
+/* Contact on the right */
+.footer-contact {
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Footer bottom stays on its own row */
+.footer-bottom {
+    width: 100%;
+}

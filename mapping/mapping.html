@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mapping Project | PWT Pythons</title>
+
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" href="mapping.css">
+</head>
+
+<body>
+
+        <!-- LOADING SCREEN -->
+        <div id="loader-overlay" aria-label="Loading page">
+            <div class="loader-content">
+                <div class="loader-spinner" aria-hidden="true">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- NAVBAR -->
+<!-- NAVIGATION -->
+<nav class="navbar" aria-label="Main navigation">
+
+    <a href="../index.html#home" class="brand"
+       aria-label="PWT Pythons home">
+        <div class="brand-logo">
+            <img src="../main-imgs/logo.png"
+                 alt="PWT Pythons logo">
+        </div>
+
+        <div class="brand-text">
+            <div class="brand-name">PWT PYTHONS</div>
+        </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#gallery">Gallery</a></li>
+        <li><a href="../localities/localities.html">Localities</a></li>
+        <li><a href="../products/products.html">Our Pythons</a></li>
+        <li><a class="active" herf="mapping.html">Mapping Project</a></li>
+        <li><a href="../field-notes/field-notes.html">Field Notes</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks">
+
+        <svg viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round">
+            <path d="M4 7H20M4 12H20M4 17H20"/>
+        </svg>
+    </button>
+
+</nav>
+
+    <main>
+        <section id="mapping-hero">
+            <p class="portfolio-label">PWT PYTHONS</p>
+            <h1>Mapping Projects</h1>
+            <p>Your mapping page description goes here.</p>
+        </section>
+
+        <section id="mapping-content">
+
+            <div class="mapping-image">
+                <img src="../main-imgs/python.png" alt="PWT Pythons">
+            </div>
+
+            <div class="coming-soon">
+                <h2>Coming Soon</h2>
+
+                <p>
+                    We are currently developing a collection of detailed
+                    mapping projects, supported by extensive research
+                    and articles.
+                </p>
+
+                <p>
+                    Each project is being carefully developed to provide
+                    accurate and informative insights into python
+                    distributions and localities.
+                </p>
+
+                <span class="coming-soon-label">
+                    Currently in development
+                </span>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+<!-- FOOTER -->
+    <footer class="footer-section">
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#gallery">Gallery</a>
+            <a href="../localities/localities.html">Localities</a>
+            <a href="../products/products.html">Our Pythons</a>
+            <a href="mapping.html">Mapping Project</a>
+            <a href="../field-notes/field-notes.html">Field Notes</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>
+                <a href="mailto:pwtpythons@gmail.com">
+                    pwtpythons@gmail.com
+                </a>
+            </p>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="rights">
+                &copy; <span id="currentYear"></span>
+                PWT Pythons. All Rights Reserved.
+            </p>
+
+            <div class="morks-wrapper">
+                <p class="footer-Morks">
+                    Powered By <span class="morks-name">Morks</span>
+                </p>
+
+                <img
+                    class="Morkslogo"
+                    src="../main-imgs/morks-logo.png"
+                    alt="Morks"
+                    loading="lazy">
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="mapping.js"></script>
+
+</body>
+</html>
