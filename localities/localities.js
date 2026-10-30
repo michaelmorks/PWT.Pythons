@@ -70,12 +70,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create the map.
   const map = L.map("locality-map");
 
-  // Add the map background.
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+// Add Tracestrack Topo map background.
+L.tileLayer(
+  "https://tile.tracestrack.com/topo__/{z}/{x}/{y}.webp?key=0e872c62bba5ffcfd5f6d356ee826a2f",
+  {
     attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 18
-  }).addTo(map);
+      '&copy; <a href="https://www.tracestrack.com/">Tracestrack</a> contributors',
+    maxZoom: 19
+  }
+).addTo(map);
 
   const markers = {};
 
