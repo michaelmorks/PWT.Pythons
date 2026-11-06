@@ -357,6 +357,75 @@ body {
     background: #9a784a;
 }
 
+.locality-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #211811;
+  }
+  
+  .locality-heading h2 {
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+  }
+  
+  .locality-heading p {
+    color: #79695D;
+    line-height: 1.7;
+  }
+
+  .read-more {
+    margin-top: 10px;
+}
+
+.read-more summary {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--copper);
+    font-weight: 600;
+    list-style: none;
+}
+
+.read-more summary::-webkit-details-marker {
+    display: none;
+}
+
+.read-more summary::after {
+    content: " +";
+}
+
+.read-more[open] summary::after {
+    content: " −";
+}
+
+.read-more summary:hover {
+    color: var(--copper-light);
+}
+
+.read-more p {
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+#more-text {
+    display: none;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--copper);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.read-more-btn:hover {
+    color: var(--copper-light);
+}
+
 /* ========================================
    FOOTER
 ======================================== */

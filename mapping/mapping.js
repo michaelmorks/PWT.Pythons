@@ -63,3 +63,30 @@ const currentYear = document.getElementById("currentYear");
 if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
 }
+
+
+function toggleReadMore() {
+    const moreContent = document.getElementById("moreContent");
+    const readMoreBtn = document.getElementById("readMoreBtn");
+
+    if (moreContent.classList.contains("show")) {
+
+        // Hide the extra content
+        moreContent.classList.remove("show");
+
+        // Move button back to the top
+        readMoreBtn.textContent = "Read More +";
+        moreContent.before(readMoreBtn);
+
+    } else {
+
+        // Show the extra content
+        moreContent.classList.add("show");
+
+        // Change button text
+        readMoreBtn.textContent = "Read Less −";
+
+        // Move button to the bottom of the article
+        moreContent.after(readMoreBtn);
+    }
+}

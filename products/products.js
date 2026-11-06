@@ -13,6 +13,20 @@ function hideProductsLoader() {
     }, 1000);
 }
 
+
+function toggleReadMore() {
+    const moreText = document.getElementById("more-text");
+    const button = document.getElementById("readMoreBtn");
+
+    if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+        button.textContent = "Read More +";
+    } else {
+        moreText.style.display = "inline";
+        button.textContent = "Read Less";
+    }
+}
+
 window.addEventListener("load", hideProductsLoader);
 
 // Fallback in case the page has already finished loading.
