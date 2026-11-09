@@ -891,6 +891,23 @@ body {
 
 /* ================= QUARANTINE ARTICLE ================= */
 
+/* Centre the quarantine article text */
+
+.article-header {
+  text-align: center;
+}
+
+.article-body {
+  text-align: center;
+}
+
+.article-body h3,
+.article-body h4 {
+  text-align: center;
+  border-left: none;
+  padding-left: 0;
+}
+
 .article-section {
   background: var(--copper-ivory);
   padding: 90px 8%;
@@ -930,6 +947,7 @@ body {
   color: var(--bronze);
   font-size: 16px;
   line-height: 1.9;
+
 }
 
 .article-body p {
