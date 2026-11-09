@@ -889,6 +889,134 @@ body {
 
 
 
+/* ================= QUARANTINE ARTICLE ================= */
+
+.article-section {
+  background: var(--copper-ivory);
+  padding: 90px 8%;
+}
+
+.research-article {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.article-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.article-category {
+  color: var(--copper);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.article-header h2 {
+  color: var(--bronze);
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.25;
+  margin: 18px 0;
+}
+
+.article-subtitle {
+  color: var(--copper-muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.article-body {
+  color: var(--bronze);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.article-body p {
+  margin-bottom: 25px;
+}
+
+.article-body h3 {
+  color: var(--bronze);
+  font-size: 25px;
+  line-height: 1.4;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 6px solid var(--copper);
+}
+
+.article-body h4 {
+  color: var(--copper);
+  font-size: 19px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+/* Read More / Read Less */
+
+.more-content {
+  display: none;
+}
+
+.more-content.show {
+  display: block;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--copper);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  margin: 5px 0 20px;
+  transition: color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  color: var(--bronze);
+}
+
+/* Mobile responsive */
+
+@media (max-width: 760px) {
+
+  .article-section {
+      padding: 60px 6%;
+  }
+
+  .article-header {
+      margin-bottom: 35px;
+  }
+
+  .article-header h2 {
+      font-size: 30px;
+  }
+
+  .article-subtitle {
+      font-size: 15px;
+  }
+
+  .article-body {
+      font-size: 15px;
+  }
+
+  .article-body h3 {
+      font-size: 21px;
+      margin-top: 35px;
+  }
+
+  .article-body h4 {
+      font-size: 17px;
+  }
+}
+
+/* ================= END QUARANTINE ARTICLE ================= */
+
+
+
 
 
 /* ===== CONTACT SECTION ===== */
