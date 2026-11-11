@@ -102,3 +102,30 @@ function toggleReadMore() {
       moreContent.after(readMoreBtn);
   }
 }
+
+
+function toggleEnclosureReadMore() {
+  const moreContent = document.getElementById("enclosureMoreContent");
+  const readMoreBtn = document.getElementById("enclosureReadMoreBtn");
+
+  if (moreContent.classList.contains("show")) {
+
+      // Hide the extra content
+      moreContent.classList.remove("show");
+
+      // Move button back to the top
+      readMoreBtn.textContent = "Read More +";
+      moreContent.before(readMoreBtn);
+
+  } else {
+
+      // Show the extra content
+      moreContent.classList.add("show");
+
+      // Change button text
+      readMoreBtn.textContent = "Read Less −";
+
+      // Move button to the bottom of the article
+      moreContent.after(readMoreBtn);
+  }
+}
