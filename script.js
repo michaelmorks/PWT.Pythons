@@ -129,3 +129,36 @@ function toggleEnclosureReadMore() {
       moreContent.after(readMoreBtn);
   }
 }
+
+
+function toggleArticle(button) {
+
+  // Find the article containing the clicked button
+  const articleBody = button.closest(".article-body");
+
+  // Find the hidden content belonging to that article
+  const moreContent = articleBody.querySelector(".more-content");
+
+  if (moreContent.classList.contains("show")) {
+
+      // Hide the extra content
+      moreContent.classList.remove("show");
+
+      // Change button text
+      button.textContent = "Read More +";
+
+      // Move button back underneath the introduction
+      moreContent.before(button);
+
+  } else {
+
+      // Show the extra content
+      moreContent.classList.add("show");
+
+      // Change button text
+      button.textContent = "Read Less −";
+
+      // Move button to the bottom of the article
+      moreContent.after(button);
+  }
+}

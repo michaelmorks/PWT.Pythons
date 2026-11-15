@@ -1035,6 +1035,177 @@ body {
 
 
 
+/* ================= ENRICHMENT ARTICLE ================= */
+
+#enrichment .article-body h4 {
+  color: var(--bronze);
+  font-size: 19px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Enrichment strategy section */
+
+.enrichment-strategies {
+  margin-top: 55px;
+}
+
+.enrichment-strategies > h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Responsive strategy card layout */
+
+
+/* ================= ENRICHMENT SLIDER ================= */
+
+.strategy-scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.strategy-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 5px 25px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Individual cards */
+
+.strategy-card {
+  flex: 0 0 220px;
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  background: #fffaf3;
+  border: 1px solid rgba(169, 103, 63, 0.25);
+  border-radius: 12px;
+
+  color: var(--bronze);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+
+  scroll-snap-align: start;
+
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.strategy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(48, 32, 24, 0.10);
+  border-color: var(--copper);
+}
+
+/* Scrollbar styling */
+
+.strategy-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.strategy-scroll::-webkit-scrollbar-track {
+  background: rgba(169, 103, 63, 0.12);
+  border-radius: 10px;
+}
+
+.strategy-scroll::-webkit-scrollbar-thumb {
+  background: var(--copper);
+  border-radius: 10px;
+}
+
+.strategy-scroll {
+  scrollbar-color: var(--copper) rgba(169, 103, 63, 0.12);
+  scrollbar-width: thin;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .strategy-card {
+      flex: 0 0 190px;
+      min-height: 105px;
+      font-size: 14px;
+  }
+
+}
+.strategy-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+/* Fade effect on the right */
+.strategy-scroll-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 100%;
+  background: linear-gradient(
+      to right,
+      rgba(245, 235, 221, 0),
+      #F5EBDD
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+.strategy-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85px;
+  padding: 18px;
+  background: #fffaf3;
+  border: 1px solid rgba(169, 103, 63, 0.25);
+  border-radius: 12px;
+  color: var(--bronze);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.5;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.strategy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(48, 32, 24, 0.10);
+  border-color: var(--copper);
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+
+  .strategy-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+  }
+
+  .strategy-card {
+      min-height: 75px;
+      padding: 13px 10px;
+      font-size: 13px;
+  }
+
+}
+
+
 
 
 /* ===== CONTACT SECTION ===== */
